@@ -1,0 +1,67 @@
+there exist variables with different datatypes!
+$i-am-null: null
+$i-am-bool: true, false
+$number: 7
+$strings: 'string' + 'catenation'
+$color: #fff
+
+There exist some different operators in sass
++ , - , / , * , and modulus I've heard!
+
+Equality operators!!
+== is a equality operator!
+!= is not equal to!
+
+Comparison operators!!
+> greater then
+< less then
+
+Logical operators
+@if $var == 1
+ bla bla bla
+ @else
+  bla bla bla
+
+Strings can be concatenated!
+
+& ampersand is a parentpointer
+
+Partials are import files!
+@import
+
+Miixins exist
+@mixin mixinname then use @include mixinname to use it
+@mixin ($arg,$arg2) arguments can be included!
+
+Inheritance exist using @extend parent.
+
+placeholder selectors are selectors with %class look
+
+Lists in sass is like arrays! and these can be looped
+thrugh with @each!
+
+There exists functions in sass!
+@function functionname($arg)
+  @return $arg + $arg
+
+to use function!
+functionname(100)
+
+If-satement exist!
+
+for loops exist
+@for $i from 1 through 10
+  item-#{$i}
+    width:2em
+
+$list 1 2 3 4 5
+
+@each @number in $list
+  do some stuff!
+
+$people: (user1:bobm user2:john)
+
+@each $key, $user in $people
+  $key = user1, $user=bobm
+
+while loops also exist, medans något e falskt!
