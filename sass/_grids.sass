@@ -1,0 +1,63 @@
+$colmargin: 0.01
+$success: #4FE85C
+
+$laptopWidth: 1200px
+$tabletWidth: 750px
+$phoneWidth: 400px
+
+
+@mixin colCount($value)
+  width: (0.1*$value - $colmargin*2)*100%
+
+@mixin colChoose($value)
+  @media (max-width: $laptopWidth)
+    +colCount($value)
+  @media (max-width: $tabletWidth)
+    +colCount($value*2)
+  @media (max-width: $phoneWidth)
+    +colCount($value*10)
+
+.col-1
+  @extend %colstuff
+  +colChoose(1)
+.col-2
+  @extend %colstuff
+  +colCount(2)
+.col-3
+  @extend %colstuff
+  +colCount(3)
+.col-4
+  @extend %colstuff
+  +colCount(4)
+.col-5
+  @extend %colstuff
+  +colCount(5)
+.col-6
+  @extend %colstuff
+  +colCount(6)
+.col-7
+  @extend %colstuff
+  +colCount(7)
+.col-8
+  @extend %colstuff
+  +colCount(8)
+.col-9
+  @extend %colstuff
+  +colCount(9)
+.col-10
+  @extend %colstuff
+  +colCount(10)
+
+.row
+  word-spacing: -4px
+  border: 1px solid black
+  padding: 0px
+  margin: 0px
+
+%colstuff
+  background-color: white
+  border-radius: 0.1em
+  word-spacing: normal
+  display: inline-block
+  margin: $colmargin*100%
+  padding: 0px
