@@ -1,0 +1,21 @@
+{
+  "name": "gridstyler",
+  "version": "1.0.0",
+  "description": "gridstyler",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "keywords": [
+    "style",
+    "websites"
+  ],
+  "author": "Samuel Forslund",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "lite-server": "^2.2.2"
+  }
+}
