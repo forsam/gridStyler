@@ -1,0 +1,32 @@
+@import colors
+@import sizes
+
+.navbar
+  display: block
+  margin-top: 20px
+  border-bottom: 1px solid black
+  word-spacing: -4px
+
+  &-btn
+    display: none
+  &-mark
+    font-size: 1.5em
+    display: inline-block
+    text-decoration: underline
+  &-item
+    word-spacing: normal
+    padding: 10px
+    display: inline-block
+    border-right: 1px solid black
+    &:hover
+      background-color: $success
+    &:last-of-type
+      border-right: 0px
+  @media (max-width: $phoneWidth)
+    &-item
+      display: none
+    &-btn
+      display: inline-block
+      float: right
+      padding-right: 50px
+      cursor: pointer

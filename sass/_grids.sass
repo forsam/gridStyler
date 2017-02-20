@@ -1,36 +1,36 @@
-import colors
+@import colors
+@import sizes
 
-$colmargin: 0.01
-
-$laptopWidth: 1200px
-$tabletWidth: 750px
-$phoneWidth: 400px
+$colMargin: 0.01
+$gridCount: 10
+$colPadding: 0.01
 
 @mixin colCount($value)
-  width: (0.1*$value - $colmargin*2)*100%
+  width: ((1/$gridCount)*$value - ($colPadding + $colMargin)*2)*100%
 
 @mixin colChoose($value)
   +colCount($value)
   @media (max-width: $tabletWidth)
     +colCount($value*2)
   @media (max-width: $phoneWidth)
-    +colCount($value*10)
+    +colCount($gridCount)
 
-@for $i from 1 through 10
+@for $i from 1 through $gridCount
   .col-#{$i}
     @extend %colstuff
     +colChoose($i)
 
 .row
   word-spacing: -4px
-  border: 1px solid black
   padding: 0px
   margin: 0px
+  display: block
 
 %colstuff
   background-color: white
   border-radius: 0.1em
   word-spacing: normal
   display: inline-block
-  margin: $colmargin*100%
-  padding: 0px
+  margin: $colMargin*100%
+  padding: $colPadding*100%
+  min-height: 1em
